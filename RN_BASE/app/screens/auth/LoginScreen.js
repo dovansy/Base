@@ -5,11 +5,9 @@ import NavigationUtil from '../../navigation/NavigationUtil';
 import { GoogleSignin, statusCodes } from '@react-native-community/google-signin';
 import { TextInput } from 'react-native-gesture-handler';
 import { styles } from '@app/constants/Theme';
-import reactotron from '@app/debug/ReactotronConfig';
 import { requestLogin } from '@api'
 import { LOGIN_TYPE, SCREEN_ROUTER } from '@app/constants/Constant';
 import R from '@app/assets/R';
-import async from '@react-native-community/async-storage'
 import { connect } from 'react-redux'
 import { userNameChange, passWordChange, loginSucces } from '@action'
 import AsyncStorage from '@react-native-community/async-storage';

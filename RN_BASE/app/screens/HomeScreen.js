@@ -9,15 +9,13 @@ import DaiiChiHeader from '@app/components/DaiiChiHeader'
 import { requestHome } from '@action';
 import R from '@R';
 
-
 class HomeScreen extends Component {
 
-    componentDidMount() {
+    async componentDidMount() {
         this.props.requestHome('deviceid')
     }
 
     render() {
-
         return (
             <View>
                 <DaiiChiHeader
@@ -73,7 +71,7 @@ class HomeScreen extends Component {
                         </View>
                         <View style={styles.number_point}>
                             <Image style={styles.img_point} source={R.images.ic_coin} />
-                            <Text style={styles.txt_number_point}>{homeState.data.customerInfo.point}</Text>
+                            <Text style={styles.txt_number_point}>{homeState.data.data.customerInfo.point}</Text>
                             <Image style={styles.img_point} source={R.images.ic_path} />
                         </View>
                     </View>
@@ -154,7 +152,7 @@ class HomeScreen extends Component {
                 }}>
                 <ScrollView
                     horizontal={true}>
-                    {homeState.data.listProduct.map(product => {
+                    {homeState.data.data.listProduct.map(product => {
                         return this._productItem(product)
                     })}
                 </ScrollView>
