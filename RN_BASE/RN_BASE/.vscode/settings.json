@@ -1,9 +1,0 @@
-// {
-//     "java.configuration.updateBuildConfiguration": "disabled"
-// }
-
-{
-    "path-intellisense.mappings": {
-      "~": "${workspaceRoot}/app"
-    }
-  }
